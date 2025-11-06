@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Go Anywhere</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Pacifico&display=swap" rel="stylesheet">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <div class="logo-container">
+      <img id="logo" src="Gemini_Generated_Image_h5ssdah5ssdah5ss.png" alt="logo">
+    </div>
+    <div class="title">
+      <p>Find Your Wayyy...!!!</p>
+    </div>
+  </div>
+
+  <!-- Menu Bar -->
+  <div class="menu-bar">
+    <div class="menu-item contact">
+      Contact
+      <div class="contact-box">
+        <p><strong>Name:</strong> Subham Rout</p>
+        <p><strong>College:</strong> Odisha University of Technology and Research</p>
+        <p><strong>Phone:</strong> 82606xxxxx</p>
+      </div>
+    </div>
+    <div class="menu-item">Help</div>
+    <div class="menu-item">Report A Bug</div>
+  </div>
+
+  <!-- Location Permission Section -->
+  <div class="location-section">
+    <p>We’d like to access your current location to show nearby places.</p>
+    <button id="getLocationBtn">Allow Location Access</button>
+
+    <div id="locationOutput"></div>
+    <div id="map"></div>
+
+    <div class="search-section" id="searchSection">
+      <h3>Where to Go?</h3>
+      <select id="placeType">
+        <option value="">-- Select a place type --</option>
+        <option value="hospital">Hospitals</option>
+        <option value="police">Police Stations</option>
+        <option value="fire_station">Fire Stations</option>
+        <option value="school">Schools</option>
+        <option value="college">Colleges</option>
+        <option value="post_office">Post Offices</option>
+        <option value="bus_station">Bus Stops</option>
+        <option value="train_station">Train Stations</option>
+        <option value="airport">Airports</option>
+        <option value="theatre">Theatres</option>
+        <option value="restaurant">Restaurants</option>
+      </select>
+      <button id="searchBtn">Search</button>
+    </div>
+
+    <div id="placesList"></div>
+  </div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
